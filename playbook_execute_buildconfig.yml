@@ -1,5 +1,8 @@
----
-- hosts: webservers
-
-  roles:
-    - { role: apache }
+- name: Create a project
+  openshift_raw:
+    api_version: v1
+    kind: Project
+    name: testing
+    description: Testing
+    display_name: "This is a test project."
+    state: present
