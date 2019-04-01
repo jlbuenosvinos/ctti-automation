@@ -2,6 +2,10 @@
   hosts: localhost
   gather_facts: false
   tasks:
+    - name: debug
+      debug:
+        msg: "curl -X POST -H "Content-Type\":\" application/json" -H "Authorization\":\" Bearer {{ctti_ocp_token}}" -k {{ctti_ocp_url}}/apis/build.openshift.io/v1/namespaces/cicd-ocpadmin/buildconfigs/sales-prereqs-pipeline/webhooks/secretvalue2/generic"
+        verbosity: 4
     - name: openShift sales-prereqs
       args:
         warn: false
