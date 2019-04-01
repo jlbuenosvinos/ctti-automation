@@ -1,6 +1,4 @@
 - name: Sales Application Pre-reqs
-  hosts: localhost
-  gather_facts: false
   tasks:
     - name: debug
       debug:
