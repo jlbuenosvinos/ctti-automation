@@ -2,7 +2,6 @@
   hosts: bastion
   gather_facts: false
   tasks:
-
     - name: openShift sales-prereqs
       args:
         warn: false
