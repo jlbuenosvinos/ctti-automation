@@ -1,5 +1,5 @@
 - name: Sales Application Stock Query Service
-  hosts: local
+  hosts: bastion
   gather_facts: false
   tasks:
     - name: openShift sales-stock-query

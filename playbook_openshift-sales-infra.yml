@@ -1,5 +1,5 @@
 - name: Sales Application Infra
-  hosts: local
+  hosts: bastion
   gather_facts: false
   tasks:
     - name: openShift sales-infra

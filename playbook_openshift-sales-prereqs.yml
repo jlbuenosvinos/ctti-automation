@@ -1,5 +1,5 @@
 - name: Sales Application Pre-reqs
-  hosts: local
+  hosts: bastion
   gather_facts: false
   tasks:
     - name: debug
