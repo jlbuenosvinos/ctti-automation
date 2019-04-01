@@ -5,6 +5,4 @@
     - name: openShift sales-init
       args:
         warn: false
-      command: curl -X POST -H "Content-Type\":\" application/json" -H "Authorization\":\" Bearer {{ctti_ocp_token}}" -k {{ctti_ocp_url}}/apis/build.openshift.io/v1/namespaces/cicd-ocpadmin/buildconfigs/sales-init-pipeline/webhooks/secretvalue2/generic
-    - name: sleep for 18 seconds and continue with play
-      wait_for: timeout=18
+      command: oc start-build sales-init-pipeline -n cicd-ocpadmin --wait
