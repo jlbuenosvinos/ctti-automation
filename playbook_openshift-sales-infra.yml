@@ -1,5 +1,5 @@
 - name: Sales Application Infra
-  hosts: localhost
+  hosts: local
   gather_facts: false
   tasks:
     - name: openShift sales-infra
@@ -8,4 +8,3 @@
       command: curl -X POST -H "Content-Type\":\" application/json" -H "Authorization\":\" Bearer {{ctti_ocp_token}}" -k {{ctti_ocp_url}}/apis/build.openshift.io/v1/namespaces/cicd-ocpadmin/buildconfigs/sales-infra-pipeline/webhooks/secretvalue2/generic
     - name: sleep for 300 seconds and continue with play
       wait_for: timeout=300
-      delegate_to: localhost
